@@ -64,7 +64,7 @@ FEDORA_PACKAGES=(
 
 # Install all Fedora packages (bulk - safe from COPR injection)
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
-dnf -y install "${FEDORA_PACKAGES[@]}" --skip-broken --skip_if_unavailable
+dnf -y install "${FEDORA_PACKAGES[@]}" --skip-broken
 
 # Example: dnf5 install -y tmux
 
