@@ -44,6 +44,17 @@ echo "::endgroup::"
 echo "::group:: Install Packages"
 
 # Install packages using dnf5
+
+FEDORA_PACKAGES=(
+    # nodejs
+    # nodejs-npm
+    # pnpm
+)
+
+# Install all Fedora packages (bulk - safe from COPR injection)
+echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
+dnf -y install "${FEDORA_PACKAGES[@]}"
+
 # Example: dnf5 install -y tmux
 
 # Example using COPR with isolated pattern:

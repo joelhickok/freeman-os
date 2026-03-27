@@ -13,7 +13,7 @@
 
 # Programming languages and tools
 # brew "go"             # Go programming language
-# brew "node"           # Node.js
+brew "node"           # Node.js
 # brew "python@3.12"    # Python
 # brew "rust"           # Rust programming language
 
