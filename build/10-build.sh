@@ -49,11 +49,22 @@ FEDORA_PACKAGES=(
     # nodejs
     # nodejs-npm
     # pnpm
+    sway
+    nwg-panel
+    swaylock
+    nwg-dock
+    waybar
+    rofy
+    kanshi
+    thunar
+    foot
+    dunst
+    Thunar
 )
 
 # Install all Fedora packages (bulk - safe from COPR injection)
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
-dnf -y install "${FEDORA_PACKAGES[@]}"
+dnf -y install "${FEDORA_PACKAGES[@]}" --skip-broken --skip_if_unavailable
 
 # Example: dnf5 install -y tmux
 
