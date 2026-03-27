@@ -54,7 +54,7 @@ FEDORA_PACKAGES=(
     swaylock
     nwg-dock
     waybar
-    rofy
+    rofi
     kanshi
     thunar
     foot
@@ -64,7 +64,7 @@ FEDORA_PACKAGES=(
 
 # Install all Fedora packages (bulk - safe from COPR injection)
 echo "Installing ${#FEDORA_PACKAGES[@]} packages from Fedora repos..."
-dnf -y install "${FEDORA_PACKAGES[@]}" --skip-broken
+dnf -y install "${FEDORA_PACKAGES[@]}" --skip-broken --skip-unavailable
 
 # Example: dnf5 install -y tmux
 
